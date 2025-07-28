@@ -113,7 +113,7 @@ def plot_payoff(ax, precios_rango, payoff, title, color_line, color_fill_positiv
     max_profit = max(payoff)
     max_loss = min(payoff)
     ax.text(95, max_profit * 0.80, f"Máx Beneficio: {max_profit:.1f}", bbox=dict(facecolor="lightgreen", alpha=0.7))
-    ax.text(95, max_loss * 0.9, f"Máx Beneficio: {abs(max_loss):.1f}", bbox=dict(facecolor="lightcoral", alpha=0.7))  
+    ax.text(95, max_loss * 0.9, f"Máx Pérdida: {abs(max_loss):.1f}", bbox=dict(facecolor="lightcoral", alpha=0.7))  
 
 # Crear figura con 2 filas y 2 columnas de subplots
 fig, axs = plt.subplots(2, 2, figsize=(24, 10), dpi=300)

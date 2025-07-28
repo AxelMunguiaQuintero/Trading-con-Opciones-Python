@@ -22,7 +22,7 @@ def arbol_binomial_opciones(S, K, T, r, sigma, n, tipo="europea", opcion="call")
     # Construir árbol de precios del activo
     for i in range(1, n+1):
         for j in range(0, i + 1):
-            arbol[i, j] = 100 * u ** (i - j) * d ** j
+            arbol[i, j] = S * u ** (i - j) * d ** j
             
     # Calcular payoff en el último nodo
     payoff = np.zeros((n + 1, n + 1))
