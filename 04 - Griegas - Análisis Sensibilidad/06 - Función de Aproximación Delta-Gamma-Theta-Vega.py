@@ -100,7 +100,7 @@ delta_sigma = -5 # Cambio en volatilidad implícita (Disminuye 5%)
 tipos_opcion = ["call", "put"]
 resultados = {}
 for tipo in tipos_opcion:
-    aprox, orig, cambio, griegas = delta_gamma_theta_vega_aprox(S, K, T, r, sigma, delta_S, delta_t, delta_sigma)
+    aprox, orig, cambio, griegas = delta_gamma_theta_vega_aprox(S, K, T, r, sigma, delta_S, delta_t, delta_sigma, option_type=tipo)
     resultados[tipo] = {
         "aprox": aprox,
         "orig": orig,
